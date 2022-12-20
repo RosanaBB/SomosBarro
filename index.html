@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<!--
+	
+-->
+
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Función Somos Barro</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+
+		<link rel="stylesheet" href="css/style.css" />
+
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZXJBVDf7R4JqmSpopVPoduIGWx1IwpBM"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+
+
+
+	</head>
+	<body>
+	<div class="svg-wrap">
+      <svg width="64" height="64" viewBox="0 0 64 64">
+        <path id="arrow-left" d="M26.667 10.667q1.104 0 1.885 0.781t0.781 1.885q0 1.125-0.792 1.896l-14.104 14.104h41.563q1.104 0 1.885 0.781t0.781 1.885-0.781 1.885-1.885 0.781h-41.563l14.104 14.104q0.792 0.771 0.792 1.896 0 1.104-0.781 1.885t-1.885 0.781q-1.125 0-1.896-0.771l-18.667-18.667q-0.771-0.813-0.771-1.896t0.771-1.896l18.667-18.667q0.792-0.771 1.896-0.771z"></path>
+      </svg>
+
+      <svg width="64" height="64" viewBox="0 0 64 64">
+        <path id="arrow-right" d="M37.333 10.667q1.125 0 1.896 0.771l18.667 18.667q0.771 0.771 0.771 1.896t-0.771 1.896l-18.667 18.667q-0.771 0.771-1.896 0.771-1.146 0-1.906-0.76t-0.76-1.906q0-1.125 0.771-1.896l14.125-14.104h-41.563q-1.104 0-1.885-0.781t-0.781-1.885 0.781-1.885 1.885-0.781h41.563l-14.125-14.104q-0.771-0.771-0.771-1.896 0-1.146 0.76-1.906t1.906-0.76z"></path>
+      </svg>
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+
+   <div class="container-fluid">
+
+    <!-- HEADER -->
+
+    <section id="header">
+
+      <!-- NAVIGATION -->
+      <nav class="navbar navbar-fixed-top navbar-default bottom">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+              <span class="sr-only">Navegación de palanca</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#header">Fundación Somos Barro </a>
+          </div><!-- /.navbar-header -->
+
+
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#header">Inicio</a></li>
+              <li><a href="#about">Noticias</a></li>              
+              <li><a href="#portfolio">Fundación</a></li>
+			  <li><a href="#team">Somos</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+          </div> <!-- /.navbar-collapse -->
+        </div> <!-- /.container -->
+      </nav>
+
+      <!-- SLIDER -->
+      <div class="header-slide">
+        <section>
+          <div id="loader" class="pageload-overlay" data-opening="M 0,0 0,60 80,60 80,0 z M 80,0 40,30 0,60 40,30 z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+              <path d="M 0,0 0,60 80,60 80,0 Z M 80,0 80,60 0,60 0,0 Z"/>
+            </svg>
+          </div> <!-- /.pageload-overlay -->
+          
+          <div class="image-slide bg-fixed">
+            <div class="overlay">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+
+                    <div class="slider-content">
+                      <h1></h1>
+                      <p>Somos una fundación creativa</p>
+                    </div>
+
+                  </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+              </div> <!-- /.container -->
+            </div> <!-- /.overlay -->
+          </div> <!-- /.image-slide -->
+
+          <nav class="nav-slide">
+            <a class="prev" href="#prev">
+              <span class="icon-wrap">
+                <svg class="icon" width="32" height="32" viewBox="0 0 64 64">
+                  <use xlink:href="#arrow-left">
+                </svg>
+              </span>
+              <div>
+                <span>Foto anterior</span>
+                <h3>...</h3>
+                <p>...</p>
+                <img alt="Previous thumb">
+              </div>
+            </a>
+            <a class="next" href="#next">
+              <span class="icon-wrap">
+                <svg class="icon" width="32" height="32" viewBox="0 0 64 64">
+                  <use xlink:href="#arrow-right">
+                </svg>
+              </span>
+              <div>
+                <span>siguiente foto</span>
+                <h3>...</h3>
+                <p>...</p>
+                <img alt="Next thumb">
+              </div>
+            </a>
+          </nav>
+        </section>
+
+        <script type="text/javascript">
+        var dataHeader = [
+                            {
+                              bigImage :"images/slide-1.png",
+                              title : "Unidos",
+							  author : "Templatestock"
+                            },
+                            {
+                              bigImage :"images/slide-2.png",
+                              title : "Compañero & Amigos",
+                              author : "Templatestock"
+                            },
+                            {
+                              bigImage :"images/slide-3.png",
+                              title : "Conseguir el éxito",
+                              author : "Templatestock"
+                            }
+                            
+                        ],
+            loaderSVG = new SVGLoader(document.getElementById('loader'), {speedIn : 600, speedOut : 600, easingIn : mina.easeinout});
+            loaderSVG.show()
+        </script>
+
+      </div><!-- /.header-slide -->
+    </section>
+
+    <!-- HEADER END -->
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="light">
+      <header class="title">
+        <h2>Sobre <span>Nosotros</span></h2>
+        <p>Fundación Somos Barro, es una organización sin fines de lucro que se conformó en el año 2022 con el objetivo de construir un espacio de formación artística y contención social para niños y niñas de Villa Don Alberto, en Resistencia, Chaco. Hasta el momento se han brindado talleres gratuitos de cerámica, música, circo, malabares, dibujo y también de huerta y reciclado. 
+          Integrantes:
+          Presidente: Germán Cenzi
+          Secretaría: Narela Sanchez
+          Tesorera: Beatriz Ivanoff
+          </p>
+      </header>
+
+      <body>
+
+        <main>
+    
+            <div class="container__card">
+    
+                <div class="card__father">
+                    <div class="card">
+                        <div class="card__front" style="background-image: url(images/..png);">
+                            <div class="bg"></div>
+                            <div class="body__card_front">
+                              <h1>Taller en cerámica</h1>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="body__card_back">
+                                <p>Ofrece liberación puedes crear y expresarte de alguna forma.Aumenta tu perspectiva optimista:la cerámica permite mejoras en la espontaneidad, proporciona una salida para el duelo y lo ayuda a auto identificarse y expresarse.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+    
+                <div class="card__father">
+                    <div class="card">
+                        <div class="card__front" style="background-image: url(images/r.png);">
+                            <div class="bg"></div>
+                            <div class="body__card_front">
+                                <h1>Taller de arte</h1>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="body__card_back">
+                                <p>Taller Integrador en donde se aprende a través de la música, las rimas, la literatura y la pintura un poco más sobre nuestra flora y nuestra cultura. La reducción del estrés y la ansiedad, el potenciamiento de nuestra memoria y concentración.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+    
+                <div class="card__father">
+                    <div class="card">
+                        <div class="card__front" style="background-image: url(images/t.png);">
+                            <div class="bg"></div>
+                            <div class="body__card_front">
+                                <h1>Macrame</h1>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="body__card_back">
+                                <p>Reduce el estrés, ayuda a la concentración, permite momentos de relajación, reduce los niveles de ansiedad, aumenta la creatividad y te ayuda a estar en el aquí y el ahora. </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card__father">
+                  <div class="card">
+                      <div class="card__front" style="background-image: url(images/y.png);">
+                          <div class="bg"></div>
+                          <div class="body__card_front">
+                              <h1>Taller de cocina</h1>
+                          </div>
+                      </div>
+                      <div class="card__back">
+                          <div class="body__card_back">
+                              <p>Aprender a cocinar te ayudará a comprender las culturas, costumbres y sabores del mundo, también otras habilidades para la vida como comer sano, Cocinar es una excelente manera de usar tus habilidades de lectura, interpretación, creatividad y hasta matemáticas.</p>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+  
+              <div class="card__father">
+                  <div class="card">
+                      <div class="card__front" style="background-image: url(images/p-4.png);">
+                          <div class="bg"></div>
+                          <div class="body__card_front">
+                              <h1>Taller de pintura<h1>
+                          </div>
+                      </div>
+                      <div class="card__back">
+                          <div class="body__card_back">
+                              <p>La creatividad, la imaginación y la expresión artística son algunos de los aspectos que más hay que fomentar en edades tempranas. Se estimula su motricidad fina, es decir, la facultad de movimientos que requieren de precisión, una actividad muy terapéutica.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+    
+
+                      <div class="card__father">
+                      <div class="card">
+                        <div class="card__front" style="background-image: url(images/q.png);">
+                            <div class="bg"></div>
+                            <div class="body__card_front">
+                                <h1>Yoga</h1>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="body__card_back">
+                                <p>Realizar Yoga ayuda a reducir su presión arterial y su frecuencia cardíaca.
+                                   A relajarse.
+                                   Mejorar su confianza en usted mismo. 
+                                  Reducir el estrés.
+                                  </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  
+              <div class="card__father">
+                <div class="card">
+                    <div class="card__front" style="background-image: url(images/p.png);">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1>Maquillaje personal<h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <p>Maquillarse eleva la autoestima porque resalta los mejores rasgos y, al mismo tiempo, disimula aquellos con los que la persona no se siente tan cómoda, esto le permite ganar seguridad y sentirse mejor con su apariencia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+
+                    <div class="card__father">
+                    <div class="card">
+                      <div class="card__front" style="background-image: url(images/o.png);">
+                          <div class="bg"></div>
+                          <div class="body__card_front">
+                              <h1>Taller de experimental de reciclaje
+                              </h1>
+                          </div>
+                      </div>
+                      <div class="card__back">
+                          <div class="body__card_back">
+                              <p>Enseñarles a los niños la importancia del reciclaje implica transmitirles la necesidad de reducir el consumo de aquellos productos contaminantes</p>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+          </div>
+    
+            </div>
+
+
+
+      </div>
+    
+        </main>
+    
+    </body>
+     
+
+
+
+
+
+
+
+
+
+
+
+      <div class="container">
+        <div class="row table-row">
+          <div class="col-sm-6 hidden-xs">
+            <div class="section-content">
+              <div class="big-image" style="background-image:url(images/h.png)"></div>
+              <div class="imagenes">
+                <img src="images/h.png" height="330" width="500" >
+                <img src="images/s.png" height="330" width="500" >
+                <img src="images/p.png" height="330" width="500" >
+              </div>
+
+
+            </div>
+          </div>
+
+
+
+            <div class="section-content">
+              <div class="about-content left animated" data-animate="fadeInLeft">
+
+                <div class="about-detail">
+                  <h4>Música y exposición de arte en Macedonio bar </h4>
+                  <p>Este sábado visitamos el bar Macedonio para compartir el trabajo que venimos desarrollando desde la Fundación Somos Barro, en donde expusimos algunos trabajos en cerámica de los niños y niñas que participan de los encuentros, realizamos una demostración de torno. Además, Barro Musical, la banda de la Fundación, nos deleitó con algunos temas y @paula nos acompaño con una lectura reflexiva. Esta propuesta sitentiza la labor que llevamos adelante y las perspectivas con las que trabajamos. 
+                    Agradecemos a la iniciativa de las Alumnas de la Cátedra Taller de Práctica II: Gestión de Programas y Proyectos Culturales. FADYCC-UNNE. quienes nos tuvieron presente para llevar adelante un proyecto de estudio, al Bar Macedonio que nos recibieron y atendieron de la mejor manera y a lxs amigxs que acompañaron. </p>
+                </div>
+              </div>
+              
+
+              <div class="about-content left animated" data-animate="fadeInLeft">
+
+                <div class="about-detail">
+                  <h4>Visitamos al Jardín “Héroes Latinoamericanos”
+                  </h4>
+                  <p>El día de ayer, visitamos la EPGS N°1 "Nivel Inicial”, para conocer el Jardín "Héroes Latinoamericanos" del Barrio Mate Cocido y llevar a cabo una actividad de cerámica con los niños y niñas de dicha institución, a quienes también les compartimos los orígenes y desarrollo de la cerámica en latinoamerica revalorizado lo nuestro, y lo ancestral. 
+                    Agradecemos a la Direc. Lorena Ramírez quien nos abrió las puertas de su jardín, y a las seños por compartimos una mañana muy agradable.
+                    </p>
+                </div>
+              </div>
+
+              <div class="about-content left animated" data-animate="fadeInLeft">
+
+                <div class="about-detail">
+                  <h4>Se llevó a cabo el Taller de Maquillaje artístico 
+                  </h4>
+                  <p>El día de ayer brindamos un taller de maquillaje personal, destinado prioritamente a las mamis que acompañan a sus niños y niñas a los talleres artísticos. 
+                    El taller fue completamente gratuito es por eso que agradecemos profundamente a estética Estética Profesional quien nos hizo una donación de insumos para llevarlo acabo. A Paula Belizan quien organiza, gestiono y dicto el taller de manera voluntaria como así tambien Fabiana Benitez que acompaño en coordinación del mismo. 
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.row table-row -->
+      </div> <!-- /.container -->
+    </section>
+	
+	
+	    <!-- PORTFOLIO -->
+
+    <section id="portfolio" class="light">
+      <header class="title">
+        <h2>¿Qué hacemos?</h2>
+        <p>Buscamos garantizar igualdad de oportunidades y la posibilidad de que todos y todas tengan acceso gratuito a una educación artística, actividades recreativas y un espacio de contención y prevención, constituyéndose el barrio como lugar de referencia para niños, niñas y adolescentes.</p>
+      </header>
+
+      <div class="container-fluid">
+        <div class="row">
+          <ul id="filters" class="list-inline">
+            <li data-filter="all" class="filter">Todos</li>
+            <li data-filter=".branding" class="filter">Cocineros</li> 
+            <li data-filter=".graphic" class="filter">Música</li> 
+            <li data-filter=".printing" class="filter">Ceramica</li> 
+            <li data-filter=".video" class="filter">Pintura</li> 
+          </ul>
+        </div>
+
+        <div class="row">
+          <div class="container-portfolio">
+            <!-- PORTFOLIO OBJECT -->
+            <script type="text/javascript">
+            var portfolio = [
+                    {
+                      category : "branding",
+                      image : "images/p-1.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "graphic",
+                      image : "images/p-2.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "graphic",
+                      image : "images/p-3.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "video",
+                      image : "images/p-4.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "branding",
+                      image : "images/p-5.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "printing",
+                      image : "images/p-6.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "printing",
+                      image : "images/p-7.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "printing",
+                      image : "images/p-8.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    }
+                ];
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TEAM -->
+
+    <section id="team" class="light">
+      <header class="title">
+        <h2>Creative <span>Team</span></h2>
+        <p></p>
+      </header>
+      
+      <div class="container">
+        <div class="row">
+
+
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown"> 
+              <div class="img-team">
+                <img src="images/team-1.png" alt="" class="img-circle">
+              </div>
+
+              <h3>Germán Cenzi</h3>
+              <h5>Presidente</h5>
+
+              <p></p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="https://www.instagram.com/germancenzi/" class="fa fa-linkedin"></a></li>
+                  <li><a href="https://www.facebook.com/profile.php?id=100009494608222" class="fa fa-facebook"></a></li>
+
+                </ul> 
+              </div>                
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown"> 
+              <div class="img-team">
+                <img src="images/team-2.png" alt="" class="img-circle">
+              </div>
+
+              <h3>Narela Sanchez</h3>
+              <h5>Secretaría</h5>
+
+              <p></p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="https://www.facebook.com/narela.sanchez.71/photos" class="fa fa-facebook"></a></li>
+
+                </ul> 
+              </div>                
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown"> 
+              <div class="img-team">
+                <img src="images/team-3.png" alt="" class="img-circle">
+              </div>
+
+              <h3>Gabriel Alsina</h3>
+              <h5>Músico</h5>
+
+              <p></p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="https://www.instagram.com/g_alsina/" class="fa fa-linkedin"></a></li>
+                  <li><a href="https://www.facebook.com/sagalsina" class="fa fa-facebook"></a></li>
+                </ul> 
+              </div>                
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown"> 
+              <div class="img-team">
+                <img src="images/team-4.png" alt="" class="img-circle">
+              </div>
+
+              <h3>Betty Ivanoff</h3>
+              <h5>Tesorera</h5>
+
+              <p></p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="https://www.facebook.com/betty.ivanoff.3" class="fa fa-facebook"></a></li>
+
+                </ul> 
+              </div>                
+            </div>
+          </div>
+
+          
+        </div>
+      </div> <!-- /.container -->
+    </section>
+	
+	    <!-- INFO -->
+
+ <!-- /.container -->
+    </section>	
+	
+
+    
+
+
+    <!-- FOOTER CONTACT -->
+
+     <section id="contact" class="dark">
+      <header class="title">
+        <h2>contác <span>tos</span></h2>
+        <p> Para más información visitas nuestras redes o mándanos un correo electrónico. </p>
+      </header>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 animated" data-animate="fadeInLeft">
+            <form action="#">
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Tu nombre">
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" placeholder="Tu correo electrónico">
+                </div>
+                <div class="col-md-12">
+                  <textarea class="form-control" rows="3" placeholder="Dinos todo"></textarea>
+                </div>
+                <div class="col-md-12">
+                  <button class="btn btn-default submit">Enviar mensaje</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-md-4 animated" data-animate="fadeInRight">
+            <address>
+                <span><i class="fa fa-phone fa-lg"></i> 0362 471-4588 </span>
+                <span><i class="fa fa-envelope-o fa-lg"></i> <a href="">fundacionsomosbarro@gmail.com</a></span>
+                <span><a class="fa fa-map-marker fa-lg"href= "https://www.google.com/maps/place/Sta+María+de+Oro+2685,+Resistencia,+Chaco/@-27.471773,-59.0113008,17z/data=!3m1!4b1!4m5!3m4!1s0x94450c9fcabdae89:0x46bf48b7e961372c!8m2!3d-27.471773!4d-59.0113008"></a> Santa Maria de Oro 2685 3500 Resistencia, Argentina </span>
+                <span><a class="fa fa-facebook"href="https://www.facebook.com/fundacionsomosbarro"></a> Fundacion Somos Barro </span>
+                <span><a class="fa fa-linkedin"href="https://www.instagram.com/fundacionsomosbarro/"></a> fundacionsomosbarro </span>
+
+            </address>
+          </div>
+		  
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p> Hecho por <i class="fa fa-heart"></i> <a href=""></a></p>
+            <button class="btn btn-default submit" href="loginvista.html">Login</button>
+            <button class="btn btn-default submit" href="loginvista.html">Registrarce</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   </div><!-- /.container-fluid -->
+    
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
